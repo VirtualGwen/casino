@@ -17,8 +17,9 @@ int main()
 	cout << "\n\t\t========WELCOME TO THE CASINO==========\n\n";
 	cout << "\n\nWhat is your name: ";
 	getline(cin, playerName);
-	cout << "\n\nEnter the starting balance to play: $";
-	cin >> balance;
+//	cout << "\n\nEnter the starting balance to play: $";
+//	cin >> balance;
+	balance = 200;
 	
 	do 
 	{
@@ -28,7 +29,7 @@ int main()
 		
 		do 
 		{
-			cout << "Hey, " << playerName<<", enter amount to bet: $";
+			cout << "Welcome, " << playerName<<", enter amount to bet: $";
 			cin >> bettingAmount;
 			if(bettingAmount > balance)
 				cout << "Betting amount can't be more than current balance!\n"
