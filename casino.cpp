@@ -1,3 +1,7 @@
+// Number guessing game. Originally from hackr.io but has since been steadily
+// modified by Gwen Virtue. Plans are to bring it to Gnome desktop and 
+// more fully flesh out the gameplay.
+
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -18,11 +22,15 @@ int main()
 	cout << "\n\t\t========WELCOME TO THE CASINO==========\n\n";
 	cout << "\n\nWhat is your name: ";
 	getline(cin, playerName);
+// Original game had you enter your own balance. That seems a bit 
+// off to me, so I set it at $200. Will change to an ini file that can
+// be changed at a later point. I commented out the original code
+// so you can put it back to normal if you so desire.
 //	cout << "\n\nEnter the starting balance to play: $";
 //	cin >> balance;
 	balance = 200;
 	cout <<"\nWould you like to enable Double or Nothing mode? (y/n) ";
-	getlin(cin, doubleOrNothing;
+	getlin(cin, doubleOrNothing);
 	if (doubleOrNothing == 'y' || doubleOrNothing == 'Y')
 	{
 		doubleOrNothing = 'y';
@@ -66,23 +74,25 @@ int main()
 				char doubleChoose;
 				cout << "\nDouble or Nothing mode is enabled. Would you like to try for double? (y/n)";
 				getline(cin, doubleChoose);
-				if(doubleChoose == 'y' || doublechoose == 'Y')
+				if(doubleChoose == 'y' || doubleChoose == 'Y')
 				{
 					do
 					{	cout << "\nExcellent choice! Please pick a number between 1 and 2! ";
 						cin >> guess;
 						
-						if(guess <=0 || guess >2}
+						if(guess <=0 || guess >2)
 						{
 							cout <<"\nPlease only pick 1 or two.";
 						}
-					}while(guess <=0 || guess > 2)
-					dice = rand()%2 + 1
+					}while(guess <=0 || guess > 2);
+					dice = rand()%2 + 1;
 					
-					if dice == guess
+					if( dice == guess)
 					{
 						cout << "\n\nYou doubled your winnings!\n";
 						balance = balance + bettingAmount * 10;
+					
+					}
 					else
 					{
 						cout << "\n\nSorry! You lost your bet. Better luck next time!\n";
