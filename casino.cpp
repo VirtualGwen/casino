@@ -13,6 +13,7 @@ int main()
 	int guess;
 	int dice;
 	char choice;
+	char doubleOrNothing;
 	srand(time(0));
 	cout << "\n\t\t========WELCOME TO THE CASINO==========\n\n";
 	cout << "\n\nWhat is your name: ";
@@ -20,6 +21,14 @@ int main()
 //	cout << "\n\nEnter the starting balance to play: $";
 //	cin >> balance;
 	balance = 200;
+	cout <<"\nWould you like to enable Double or Nothing mode? (y/n) ";
+	getlin(cin, doubleOrNothing;
+	if (doubleOrNothing == 'y' || doubleOrNothing == 'Y')
+	{
+		doubleOrNothing = 'y';
+	}
+	else
+		doubleOrNothing = 'n';
 	
 	do 
 	{
@@ -51,6 +60,37 @@ int main()
 		{
 			cout << "\n\nYou are in Luck you have won $ " << bettingAmount * 10;
 			balance = balance + bettingAmount * 10;
+			
+			if(doubleOrNothing == 'y')
+			{
+				char doubleChoose;
+				cout << "\nDouble or Nothing mode is enabled. Would you like to try for double? (y/n)";
+				getline(cin, doubleChoose);
+				if(doubleChoose == 'y' || doublechoose == 'Y')
+				{
+					do
+					{	cout << "\nExcellent choice! Please pick a number between 1 and 2! ";
+						cin >> guess;
+						
+						if(guess <=0 || guess >2}
+						{
+							cout <<"\nPlease only pick 1 or two.";
+						}
+					}while(guess <=0 || guess > 2)
+					dice = rand()%2 + 1
+					
+					if dice == guess
+					{
+						cout << "\n\nYou doubled your winnings!\n";
+						balance = balance + bettingAmount * 10;
+					else
+					{
+						cout << "\n\nSorry! You lost your bet. Better luck next time!\n";
+						balance = balance - bettingAmount * 10;
+					}
+				}
+			}
+
 		}
 		else
 		{
