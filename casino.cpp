@@ -30,7 +30,7 @@ int main()
 //	cin >> balance;
 	balance = 200;
 	cout <<"\nWould you like to enable Double or Nothing mode? (y/n) ";
-	getlin(cin, doubleOrNothing);
+	cin >> doubleOrNothing;
 	if (doubleOrNothing == 'y' || doubleOrNothing == 'Y')
 	{
 		doubleOrNothing = 'y';
@@ -73,7 +73,7 @@ int main()
 			{
 				char doubleChoose;
 				cout << "\nDouble or Nothing mode is enabled. Would you like to try for double? (y/n)";
-				getline(cin, doubleChoose);
+				cin >> doubleChoose;
 				if(doubleChoose == 'y' || doubleChoose == 'Y')
 				{
 					do
