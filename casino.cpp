@@ -57,6 +57,12 @@ int main()
 		{
 			cout << "Guess any number between 1 and 10: ";
 			cin >> guess;
+			if(cin.fail())
+			{
+				cin.clear();
+				cin.ignore();
+				cout << "\nInvalid number.";
+			}
 			if(guess <=0 || guess > 10)
 				cout << "\n Number should be between 1 and 10\n"
 					<<"Re-enter number: \n";
